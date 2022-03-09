@@ -1,5 +1,6 @@
 .container {
   margin: 30px auto;
+  padding: 10px;
   text-align: center;
   border: 1px solid black;
   width: 350px;
@@ -9,8 +10,21 @@
   justify-content: space-around;
 }
 
+.vending_machine {
+  padding: 10px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 .vending_machine_text {
+  font-size: 30px;
   font-weight: 700;
+}
+
+.cash {
+  padding: 10px 0;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .current_cash {
@@ -31,4 +45,20 @@
 
 .cash_return_button {
   margin-top: 30px;
+}
+
+.card_machine {
+  padding: 10px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.card_check {
+  font-size: 5px;
+}
+
+.payment {
+  padding: 10px 0;
+  border: 1px solid black;
+  border-radius: 10px;
 }

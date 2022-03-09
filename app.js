@@ -4,7 +4,6 @@ const current_product = document.createElement('div');
 current_product.classList.add('current_product')
 
 const machine_product = document.querySelector('.vending_machine');
-// const machine = document.querySelector('.vending_machine_text');
 
 let cash = 0;
 
@@ -154,7 +153,7 @@ function cashReturn() {
   if (cash <= 0) {
     alert('현금을 넣어 주세요')
   } else {
-    alert(`${cash}가 반환 되었습니다`)
+    alert(`${cash}원이 반환 되었습니다`)
     cash = 0
     current_cash.textContent = `투입 금액: ${cash} 원`;
     change.remove()
@@ -220,7 +219,7 @@ function paymentCash() {
     커피: ${product_coffee} 개
     `;
 
-    total_cash_text.textContent = `결제 완료`;
+    total_cash_text.textContent = `현금 결제 완료`;
     current_cash.textContent = `투입 금액: ${cash} 원`;
     change.textContent = `환급 받을 돈: ${change_cash} 원`;
   }
@@ -287,6 +286,7 @@ function paymentCard() {
     payment.append(change)
     // payment.append(change_button)
     change.textContent = `환급 받을 돈: ${change_cash} 원`;
+    cardOnOff.textContent = 'off'
     alert('카드 결제 완료')
   } else if (cardOnOff.textContent === 'on' && cash === 0) {
     change_cash = cash
@@ -303,7 +303,11 @@ function paymentCard() {
     커피: ${product_coffee} 개
     `;
     total_cash_text.textContent = `카드 결제 완료`;
-    alert('카드 결제 완료')
+    cardOnOff.textContent = 'off'
+    alert(
+      `카드 결제 완료
+      카드를 반환합니다, 카드를 챙겨주세요
+    `)
   }
 }
 

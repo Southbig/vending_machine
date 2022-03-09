@@ -1,5 +1,4 @@
 // 제품 고르기
-
 const current_product = document.createElement('div');
 current_product.classList.add('current_product')
 
@@ -74,7 +73,6 @@ function getCoffee() {
 }
 
 // 현금 
-
 const current_cash = document.createElement('div');
 current_cash.classList.add('current_cash');
 
@@ -93,7 +91,6 @@ total_cash_text.textContent = `결제 금액: ${total_cash} 원`;
 
 
 // 현금 투입
-
 const cach_hundred = document.querySelector('.hundred');
 cach_hundred.addEventListener('click', plusHundred)
 
@@ -138,7 +135,6 @@ function plusTenThousand() {
 }
 
 // 현금 반환
-
 const cash_return = document.createElement('button')
 cash_return.classList.add('.cash_return_button');
 
@@ -163,7 +159,6 @@ function cashReturn() {
 
 
 // 현금 결제
-
 const payment_cash = document.querySelector('.payment_cash');
 
 const change = document.createElement('div');
@@ -226,7 +221,6 @@ function paymentCash() {
 }
 
 // 거스름돈 받기
-
 change_button.addEventListener('click', getCash);
 
 function getCash() {

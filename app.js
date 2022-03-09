@@ -236,7 +236,7 @@ function getCash() {
   change.remove()
   total_cash_text.remove()
   change_button.remove()
-  cardOnOff.textContent = 'off'
+  cardOnOff.textContent = 'out'
   current_cash.textContent = `투입 금액: ${cash} 원`;
 }
 
@@ -245,7 +245,7 @@ function getCash() {
 const cardOnOff = document.createElement('span');
 cardOnOff.classList.add('.card_check');
 
-cardOnOff.textContent = 'off'
+cardOnOff.textContent = 'out'
 
 const card_machine = document.querySelector('.card_machine');
 card_machine.append(cardOnOff)
@@ -253,12 +253,12 @@ card_machine.append(cardOnOff)
 card_machine.addEventListener('click', chackInCard);
 
 function chackInCard() {
-  if (cardOnOff.textContent === 'off') {
+  if (cardOnOff.textContent === 'out') {
     alert('카드를 넣었습니다')
-    cardOnOff.textContent = 'on'
+    cardOnOff.textContent = 'in'
   } else {
     alert('카드를 뺏습니다')
-    cardOnOff.textContent = 'off'
+    cardOnOff.textContent = 'out'
   }
 }
 
@@ -269,9 +269,9 @@ card.addEventListener('click', paymentCard);
 function paymentCard() {
   if (product_coke === 0 && product_water === 0 && product_coffee === 0) {
     alert('제품을 선택해 주세요')
-  } else if (cardOnOff.textContent === 'off') {
+  } else if (cardOnOff.textContent === 'out') {
     alert('카드를 넣어주세요')
-  } else if (cardOnOff.textContent === 'on' && cash > 0) {
+  } else if (cardOnOff.textContent === 'in' && cash > 0) {
     change_cash = cash
     total_cash = 0;
     product_coke = 0;
@@ -286,9 +286,9 @@ function paymentCard() {
     payment.append(change)
     // payment.append(change_button)
     change.textContent = `환급 받을 돈: ${change_cash} 원`;
-    cardOnOff.textContent = 'off'
+    cardOnOff.textContent = 'out'
     alert('카드 결제 완료')
-  } else if (cardOnOff.textContent === 'on' && cash === 0) {
+  } else if (cardOnOff.textContent === 'in' && cash === 0) {
     change_cash = cash
     // alert(`선택 제품: 
     // 콜라: ${product_coke} 개, 물: ${product_water} 개, 커피: ${product_coffee} 개을 구매 하셨습니다`)
@@ -303,7 +303,7 @@ function paymentCard() {
     커피: ${product_coffee} 개
     `;
     total_cash_text.textContent = `카드 결제 완료`;
-    cardOnOff.textContent = 'off'
+    cardOnOff.textContent = 'out'
     alert(
       `카드 결제 완료
       카드를 반환합니다, 카드를 챙겨주세요

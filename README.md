@@ -25,3 +25,5 @@
    - 현금 결제 완료 시 남은 돈 거스름 돈으로 반환
    - 현금이 없거나 적을 시 모자르다는 경고창 생성
    - 결제 완료(성공)시 제품 수량, 결제금액 초기화
+
+![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/83868259/157603291-57748d11-cb4b-4b73-b0cf-e5a880ce144e.gif)
